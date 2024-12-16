@@ -11,7 +11,7 @@ namespace TimerApplication
         public event StopwatchEventHandler OnStopped;
         public event StopwatchEventHandler OnReset;
 
-        private int timeElapsed; 
+        private int timeElapsed;
         private bool isRunning;
 
         public Stopwatch()
@@ -69,22 +69,16 @@ namespace TimerApplication
         static void Main(string[] args)
         {
             Stopwatch stopwatch = new Stopwatch();
-
-            
             stopwatch.OnStarted += DisplayMessage;
             stopwatch.OnStopped += DisplayMessage;
             stopwatch.OnReset += DisplayMessage;
 
-            Console.WriteLine("Welcome to the Stopwatch Application!");
-            Console.WriteLine("Commands:");
-            Console.WriteLine(" S - Start the stopwatch");
-            Console.WriteLine(" T - Stop the stopwatch");
-            Console.WriteLine(" R - Reset the stopwatch");
-            Console.WriteLine(" E - Exit the application");
+            ShowHeader();
 
             bool exit = false;
             while (!exit)
             {
+                ShowCommands();
                 Console.Write("Enter Command: ");
                 string command = Console.ReadLine()?.Trim().ToUpper();
 
@@ -97,11 +91,11 @@ namespace TimerApplication
                     {
                         exit = true;
                         stopwatch.Stop();
-                        Console.WriteLine("Exiting the application. Goodbye!");
+                        ShowGoodbye();
                     }
                     else
                     {
-                        Console.WriteLine("Invalid Command. Please use S, T, R, or E.");
+                        ShowInvalidCommand();
                     }
                 };
 
@@ -109,14 +103,58 @@ namespace TimerApplication
 
                 if (!exit && command != "E")
                 {
-                    Console.WriteLine($"Time Elapsed: {stopwatch.GetElapsedTime()}");
+                    ShowElapsedTime(stopwatch.GetElapsedTime());
                 }
             }
         }
 
+        private static void ShowHeader()
+        {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("========================================");
+            Console.WriteLine("       Welcome to the Stopwatch App!    ");
+            Console.WriteLine("========================================");
+            Console.ResetColor();
+        }
+
+        private static void ShowCommands()
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("\nCommands:");
+            Console.WriteLine(" S - Start the stopwatch");
+            Console.WriteLine(" T - Stop the stopwatch");
+            Console.WriteLine(" R - Reset the stopwatch");
+            Console.WriteLine(" E - Exit the application");
+            Console.ResetColor();
+        }
+
         private static void DisplayMessage(string message)
         {
-            Console.WriteLine(message);
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n" + message);
+            Console.ResetColor();
+        }
+
+        private static void ShowElapsedTime(string time)
+        {
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine($"\nTime Elapsed: {time}");
+            Console.ResetColor();
+        }
+
+        private static void ShowInvalidCommand()
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("\nInvalid Command. Please use S, T, R, or E.");
+            Console.ResetColor();
+        }
+
+        private static void ShowGoodbye()
+        {
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("\nExiting the application. Goodbye!");
+            Console.ResetColor();
         }
     }
 }

@@ -1,0 +1,15 @@
+C:\Users\pc 2024\stopwatch\bin\Debug\net9.0\stopwatch.exe
+C:\Users\pc 2024\stopwatch\bin\Debug\net9.0\stopwatch.deps.json
+C:\Users\pc 2024\stopwatch\bin\Debug\net9.0\stopwatch.runtimeconfig.json
+C:\Users\pc 2024\stopwatch\bin\Debug\net9.0\stopwatch.dll
+C:\Users\pc 2024\stopwatch\bin\Debug\net9.0\stopwatch.pdb
+C:\Users\pc 2024\stopwatch\obj\Debug\net9.0\stopwatch.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pc 2024\stopwatch\obj\Debug\net9.0\stopwatch.AssemblyInfoInputs.cache
+C:\Users\pc 2024\stopwatch\obj\Debug\net9.0\stopwatch.AssemblyInfo.cs
+C:\Users\pc 2024\stopwatch\obj\Debug\net9.0\stopwatch.csproj.CoreCompileInputs.cache
+C:\Users\pc 2024\stopwatch\obj\Debug\net9.0\stopwatch.sourcelink.json
+C:\Users\pc 2024\stopwatch\obj\Debug\net9.0\stopwatch.dll
+C:\Users\pc 2024\stopwatch\obj\Debug\net9.0\refint\stopwatch.dll
+C:\Users\pc 2024\stopwatch\obj\Debug\net9.0\stopwatch.pdb
+C:\Users\pc 2024\stopwatch\obj\Debug\net9.0\stopwatch.genruntimeconfig.cache
+C:\Users\pc 2024\stopwatch\obj\Debug\net9.0\ref\stopwatch.dll
